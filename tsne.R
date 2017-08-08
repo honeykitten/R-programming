@@ -13,3 +13,8 @@ d = dist(image)
 mds = cmdscale(d)
 plot(mds, typ = 'n')
 text(mds, number, col = color)
+
+library(tsne)
+ts = tsne(image, initial_dims = 64)
+plot(ts, typ = 'n')
+text(ts, number, col = color)
